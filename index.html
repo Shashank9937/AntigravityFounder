@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Founder OS – Strategic CEO Development System</title>
+  <meta name="description"
+    content="A structured transformation system for building strategic CEOs. Elite execution, capital allocation, and multi-business scaling." />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+     APP SHELL
+══════════════════════════════════════════════════════════ -->
+  <div class="app-shell">
+
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <!-- ── SIDEBAR ─────────────────────────────────────────── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-mark">F</div>
+        <div>
+          <div class="logo-text">Founder OS</div>
+          <div class="logo-sub">CEO Development System</div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Core</div>
+        <button class="nav-item" data-page="dashboard">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" />
+            <rect x="14" y="3" width="7" height="7" />
+            <rect x="3" y="14" width="7" height="7" />
+            <rect x="14" y="14" width="7" height="7" />
+          </svg>
+          CEO Dashboard
+        </button>
+        <button class="nav-item" data-page="domains">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3" />
+            <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+          </svg>
+          9 Domains
+        </button>
+
+        <div class="nav-section-title">Execution</div>
+        <button class="nav-item" data-page="calendar">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="4" width="18" height="18" rx="2" />
+            <line x1="16" y1="2" x2="16" y2="6" />
+            <line x1="8" y1="2" x2="8" y2="6" />
+            <line x1="3" y1="10" x2="21" y2="10" />
+          </svg>
+          Daily Calendar
+        </button>
+        <button class="nav-item" data-page="decisions">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3l1.5 4.5H18l-3.75 2.7 1.5 4.5L12 12l-3.75 2.7 1.5-4.5L6 7.5h4.5z" />
+          </svg>
+          Decision Journal
+        </button>
+
+        <div class="nav-section-title">Finance</div>
+        <button class="nav-item" data-page="finance">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+          </svg>
+          Finance Center
+        </button>
+
+        <div class="nav-section-title">Growth</div>
+        <button class="nav-item" data-page="learning">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+          Learning System
+        </button>
+        <button class="nav-item" data-page="library">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </svg>
+          Learning Library
+          <span class="nav-badge">13</span>
+        </button>
+        <button class="nav-item" data-page="advice">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+          Advice Filter
+        </button>
+        <button class="nav-item" data-page="network">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+          Network
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="founder-stage-pill">
+          <div class="stage-label">Current Stage</div>
+          <div class="stage-name" id="sidebar-stage">Operator</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ── MAIN AREA ────────────────────────────────────────── -->
+    <div class="main-area">
+
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-menu-btn btn btn-ghost" id="mobile-menu-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+          <div>
+            <div class="topbar-title" id="topbar-title">CEO Strategic Dashboard</div>
+          </div>
+        </div>
+        <div class="topbar-right">
+          <div class="topbar-date" id="topbar-date"></div>
+          <div class="topbar-exec-score">
+            <div class="exec-score-dot"></div>
+            <span style="color:var(--text-muted);font-size:.75rem">Exec Score</span>
+            <span id="topbar-exec-score" style="color:var(--accent-green)">74%</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- ════════════════════════════════════════════════════
+         PAGES
+    ════════════════════════════════════════════════════ -->
+
+      <!-- ── ONBOARDING ─────────────────────────────────────── -->
+      <div class="page active" id="page-onboarding">
+        <div class="page-content" style="max-width:720px;margin:0 auto">
+          <div style="text-align:center;padding:var(--sp-xl) 0 var(--sp-lg)">
+            <div
+              style="width:56px;height:56px;background:linear-gradient(135deg,var(--accent-blue),var(--accent-cyan));border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.4rem;font-weight:900;color:#fff;margin:0 auto var(--sp-md)">
+              F</div>
+            <h2>Welcome to Founder OS</h2>
+            <p style="margin-top:var(--sp-sm);max-width:480px;margin-left:auto;margin-right:auto">A structured
+              transformation system. Complete a brief setup to calibrate your operating system.</p>
+          </div>
+
+          <div class="card mb-lg">
+            <h5 class="mb-md">Your Current Stage</h5>
+            <div class="form-group">
+              <label class="form-label">Founder Stage</label>
+              <select class="form-control" id="ob-stage">
+                <option>Explorer</option>
+                <option selected>Operator</option>
+                <option>Scaler</option>
+                <option>Capital Allocator</option>
+                <option>Multi-Business CEO</option>
+              </select>
+            </div>
+            <div class="form-group mt-md">
+              <label class="form-label">Primary Q1 Goal</label>
+              <input class="form-control" id="ob-goal" placeholder="e.g. Reach $100K MRR by March" />
+            </div>
+          </div>
+
+          <div class="card mb-lg">
+            <h5 class="mb-md">Skill Self-Assessment <span
+                style="color:var(--text-muted);font-weight:400;font-size:.75rem">(rate 0–100)</span></h5>
+            <div class="grid-2 gap-md">
+              <div class="form-group"><label class="form-label">Market Analysis</label><input class="form-control"
+                  type="number" min="0" max="100" value="60" data-skill="Market Analysis" /></div>
+              <div class="form-group"><label class="form-label">Product Thinking</label><input class="form-control"
+                  type="number" min="0" max="100" value="65" data-skill="Product Thinking" /></div>
+              <div class="form-group"><label class="form-label">Finance</label><input class="form-control" type="number"
+                  min="0" max="100" value="50" data-skill="Finance" /></div>
+              <div class="form-group"><label class="form-label">Sales</label><input class="form-control" type="number"
+                  min="0" max="100" value="60" data-skill="Sales" /></div>
+              <div class="form-group"><label class="form-label">Marketing</label><input class="form-control"
+                  type="number" min="0" max="100" value="55" data-skill="Marketing" /></div>
+              <div class="form-group"><label class="form-label">Operations</label><input class="form-control"
+                  type="number" min="0" max="100" value="65" data-skill="Operations" /></div>
+              <div class="form-group"><label class="form-label">AI/Tech</label><input class="form-control" type="number"
+                  min="0" max="100" value="70" data-skill="AI/Tech" /></div>
+              <div class="form-group"><label class="form-label">Leadership</label><input class="form-control"
+                  type="number" min="0" max="100" value="60" data-skill="Leadership" /></div>
+              <div class="form-group"><label class="form-label">Legal/Risk</label><input class="form-control"
+                  type="number" min="0" max="100" value="35" data-skill="Legal/Risk" /></div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-lg w-full" onclick="completeOnboarding()">Enter Founder OS →</button>
+          <p style="text-align:center;margin-top:var(--sp-md);font-size:.8rem;color:var(--text-muted)">All data stored
+            locally in your browser.</p>
+        </div>
+      </div>
+
+      <!-- ── DASHBOARD ──────────────────────────────────────── -->
+      <div class="page" id="page-dashboard">
+        <div class="page-content">
+          <div class="page-header flex justify-between items-center">
+            <div>
+              <div class="section-label">Control Center</div>
+              <h2>CEO Strategic Dashboard</h2>
+            </div>
+            <div class="flex gap-md">
+              <span class="badge badge-blue" id="dash-stage">Operator</span>
+            </div>
+          </div>
+
+          <!-- Top KPI Row -->
+          <div class="grid-4 mb-lg">
+            <div class="stat-card">
+              <div class="stat-label">MRR</div>
+              <div class="stat-value text-accent" id="dash-mrr">$42K</div>
+              <div class="stat-delta up">↑ 18% MoM</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">ARR</div>
+              <div class="stat-value" id="dash-arr">$504K</div>
+              <div class="stat-delta up">↑ On track</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Runway</div>
+              <div class="stat-value" id="dash-runway">14 mo</div>
+              <div class="stat-delta up">✓ Healthy</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Exec Score</div>
+              <div class="stat-value text-green" id="dash-exec">74%</div>
+              <div class="stat-delta up">↑ +4 pts</div>
+            </div>
+          </div>
+
+          <div class="grid-2 gap-lg mb-lg">
+            <!-- Skill Radar -->
+            <div class="card">
+              <h5 class="mb-md">Skill Gap Radar</h5>
+              <div class="radar-wrap">
+                <div id="radar-chart"></div>
+              </div>
+            </div>
+            <!-- Skill bars -->
+            <div class="card">
+              <h5 class="mb-md">Competency Breakdown</h5>
+              <div id="skill-bars" class="flex-col gap-md"></div>
+            </div>
+          </div>
+
+          <div class="grid-3 gap-lg mb-lg">
+            <!-- Execution trend -->
+            <div class="card">
+              <h5 class="mb-sm">Execution Trend</h5>
+              <div id="exec-trend-chart" class="chart-container"></div>
+              <div class="flex justify-between mt-sm" style="font-size:.75rem;color:var(--text-muted)"><span>7
+                  weeks</span><span id="dash-exec-val">74%</span></div>
+            </div>
+            <!-- Decision accuracy -->
+            <div class="card">
+              <h5 class="mb-sm">Decision Accuracy</h5>
+              <div id="decision-trend" class="chart-container"></div>
+              <div class="flex justify-between mt-sm" style="font-size:.75rem;color:var(--text-muted)"><span>7
+                  weeks</span><span style="color:var(--accent-green)">74%</span></div>
+            </div>
+            <!-- MRR trend -->
+            <div class="card">
+              <h5 class="mb-sm">MRR Growth</h5>
+              <div id="mrr-trend-chart" class="chart-container"></div>
+              <div class="flex justify-between mt-sm" style="font-size:.75rem;color:var(--text-muted)"><span>7
+                  months</span><span style="color:var(--accent-cyan)">$42K</span></div>
+            </div>
+          </div>
+
+          <div class="grid-2 gap-lg mb-lg">
+            <!-- Risk heatmap -->
+            <div class="card">
+              <h5 class="mb-md">Risk Log — Active</h5>
+              <div id="risk-summary"></div>
+              <button class="btn btn-ghost btn-sm mt-md" onclick="navigate('dashboard');toggle('risk-form')">+ Add
+                Risk</button>
+              <div id="risk-form" style="display:none;margin-top:var(--sp-md)">
+                <div class="grid-2 gap-md">
+                  <div class="form-group"><label class="form-label">Risk Title</label><input class="form-control"
+                      id="risk-title" placeholder="e.g. Key hire departure" /></div>
+                  <div class="form-group"><label class="form-label">Severity</label><select class="form-control"
+                      id="risk-sev">
+                      <option>Low</option>
+                      <option selected>Medium</option>
+                      <option>High</option>
+                    </select></div>
+                </div>
+                <div class="form-group mt-sm"><label class="form-label">Description</label><input class="form-control"
+                    id="risk-desc" placeholder="Brief description" /></div>
+                <div class="form-group mt-sm"><label class="form-label">Mitigation</label><input class="form-control"
+                    id="risk-mit" placeholder="How you'll address it" /></div>
+                <div id="risk-saved" style="display:none" class="alert alert-green mt-sm">✅ Risk logged.</div>
+                <button class="btn btn-primary btn-sm mt-md" onclick="submitRisk()">Log Risk</button>
+              </div>
+            </div>
+            <!-- Q Goals -->
+            <div class="card">
+              <h5 class="mb-md">Quarterly Goals</h5>
+              <div id="qgoals-list"></div>
+              <button class="btn btn-ghost btn-sm mt-md" onclick="toggle('qgoal-form')">+ Add Goal</button>
+              <div id="qgoal-form" style="display:none;margin-top:var(--sp-md)">
+                <div class="form-group"><label class="form-label">Goal</label><input class="form-control" id="goal-text"
+                    placeholder="e.g. Hire VP Sales" /></div>
+                <div class="grid-3 gap-sm mt-sm">
+                  <div class="form-group"><label class="form-label">Quarter</label><select class="form-control"
+                      id="goal-quarter">
+                      <option>Q1 2025</option>
+                      <option>Q2 2025</option>
+                      <option>Q3 2025</option>
+                      <option>Q4 2025</option>
+                    </select></div>
+                  <div class="form-group"><label class="form-label">Status</label><select class="form-control"
+                      id="goal-status">
+                      <option>On Track</option>
+                      <option>At Risk</option>
+                      <option>Off Track</option>
+                    </select></div>
+                  <div class="form-group"><label class="form-label">Progress %</label><input class="form-control"
+                      type="number" id="goal-progress" min="0" max="100" value="0" /></div>
+                </div>
+                <button class="btn btn-primary btn-sm mt-md" onclick="submitGoal()">Add Goal</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Weekly Priority -->
+          <div class="card mb-lg">
+            <h5 class="mb-sm">Strategic Priority This Week</h5>
+            <p id="dash-priority" style="color:var(--text-secondary);font-size:.9rem">No priority set. Go to Calendar to
+              set it.</p>
+            <div class="flex gap-md mt-md">
+              <div class="stat-card" style="flex:1">
+                <div class="stat-label">Learning Score</div>
+                <div class="stat-value text-accent" id="dash-learn">61%</div>
+              </div>
+              <div class="stat-card" style="flex:1">
+                <div class="stat-label">Decisions Logged</div>
+                <div class="stat-value">0</div>
+              </div>
+              <div class="stat-card" style="flex:1">
+                <div class="stat-label">Risks Active</div>
+                <div class="stat-value text-amber">0</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card"
+            style="text-align:center;padding:var(--sp-xl);border-color:rgba(37,99,235,0.2);background:rgba(37,99,235,0.04)">
+            <p
+              style="font-size:1rem;line-height:1.8;color:var(--text-secondary);max-width:600px;margin:0 auto;font-style:italic">
+              "The Founder OS is not a productivity app.<br />It is a structured transformation system for building
+              strategic CEOs."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── 9 DOMAINS ──────────────────────────────────────── -->
+      <div class="page" id="page-domains">
+        <div class="page-content">
+          <div class="page-header">
+            <div class="section-label">CEO Mastery Framework</div>
+            <h2>9 Domains of CEO Mastery</h2>
+            <p>Click any domain to expand training modules, key metrics, and execution exercises.</p>
+          </div>
+          <div class="grid-3 gap-lg" id="domains-grid"></div>
+        </div>
+      </div>
+
+      <!-- ── CALENDAR ───────────────────────────────────────── -->
+      <div class="page" id="page-calendar">
+        <div class="page-content">
+          <div class="page-header">
+            <div class="section-label">CEO Time Architecture</div>
+            <h2>Daily CEO Calendar System</h2>
+          </div>
+
+          <div class="tabs mb-lg" style="max-width:480px">
+            <button class="tab-btn active" data-tabgroup="cal" data-tabid="weekly">Weekly</button>
+            <button class="tab-btn" data-tabgroup="cal" data-tabid="daily">Daily</button>
+            <button class="tab-btn" data-tabgroup="cal" data-tabid="quarterly">Quarterly</button>
+          </div>
+
+          <!-- Weekly View -->
+          <div class="tab-panel active" data-tabgroup="cal" data-tab="cal-weekly">
+            <div class="grid-2 gap-lg">
+              <div class="card">
+                <h5 class="mb-md">Weekly Strategic Priority</h5>
+                <div class="form-group"><label class="form-label">This week's #1 objective</label><textarea
+                    class="form-control" id="weekly-priority-val" placeholder="e.g. Close the Series A term sheet"
+                    rows="3"></textarea></div>
+                <h5 class="mb-md mt-lg">3 High-Leverage Tasks</h5>
+                <div class="flex-col gap-sm">
+                  <div class="form-group"><label class="form-label">Task 1</label><input class="form-control" id="hlt-0"
+                      placeholder="Most important task" /></div>
+                  <div class="form-group"><label class="form-label">Task 2</label><input class="form-control" id="hlt-1"
+                      placeholder="Second priority" /></div>
+                  <div class="form-group"><label class="form-label">Task 3</label><input class="form-control" id="hlt-2"
+                      placeholder="Third priority" /></div>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="mb-md">Time Block Allocation</h5>
+                <div class="flex-col gap-lg">
+                  <div>
+                    <div class="flex justify-between mb-sm"><span style="font-size:.85rem;font-weight:600">🔨 Maker
+                        Blocks</span><span class="badge badge-blue">Deep Work</span></div>
+                    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px">
+                      <div
+                        style="background:rgba(37,99,235,0.3);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--accent-blue-lt)">
+                        Mon<br />AM</div>
+                      <div
+                        style="background:rgba(37,99,235,0.3);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--accent-blue-lt)">
+                        Tue<br />AM</div>
+                      <div
+                        style="background:rgba(37,99,235,0.15);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--text-muted)">
+                        Wed</div>
+                      <div
+                        style="background:rgba(37,99,235,0.3);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--accent-blue-lt)">
+                        Thu<br />AM</div>
+                      <div
+                        style="background:rgba(37,99,235,0.15);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--text-muted)">
+                        Fri</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-sm"><span style="font-size:.85rem;font-weight:600">📋 Manager
+                        Blocks</span><span class="badge badge-purple">Meetings</span></div>
+                    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px">
+                      <div
+                        style="background:rgba(139,92,246,0.15);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--text-muted)">
+                        Mon</div>
+                      <div
+                        style="background:rgba(139,92,246,0.3);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--accent-purple)">
+                        Tue<br />PM</div>
+                      <div
+                        style="background:rgba(139,92,246,0.3);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--accent-purple)">
+                        Wed<br />Full</div>
+                      <div
+                        style="background:rgba(139,92,246,0.3);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--accent-purple)">
+                        Thu<br />PM</div>
+                      <div
+                        style="background:rgba(139,92,246,0.15);border-radius:4px;padding:8px;text-align:center;font-size:.7rem;color:var(--text-muted)">
+                        Fri</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-sm"><span style="font-size:.85rem;font-weight:600">⚡ Energy
+                        Level</span><span class="badge badge-green" id="energy-display">7/10</span></div>
+                    <input type="range" id="energy-slider" min="1" max="10" value="7" oninput="updateEnergyDisplay()" />
+                    <div class="flex justify-between mt-sm" style="font-size:.78rem;color:var(--text-muted)">
+                      <span>Low</span><span id="energy-label">🟡 Moderate</span><span>Peak</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary mt-lg" onclick="saveCalendar()">Save Weekly Plan</button>
+          </div>
+
+          <!-- Daily View -->
+          <div class="tab-panel" data-tabgroup="cal" data-tab="cal-daily">
+            <div class="grid-3 gap-lg">
+              <div class="card">
+                <h5 class="mb-md">🌅 Morning Protocol</h5>
+                <div class="flex-col gap-sm">
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Review
+                    yesterday's metrics</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Confirm top 3
+                    tasks</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Check financial
+                    dashboard</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> 60-min deep work
+                    block</label>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="mb-md">⚙️ Execution Block</h5>
+                <div class="flex-col gap-sm">
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Complete HLT
+                    #1</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Team sync (max
+                    25 min)</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Customer / sales
+                    call</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Strategic
+                    reading (30 min)</label>
+                </div>
+              </div>
+              <div class="card">
+                <h5 class="mb-md">🌙 Evening Review</h5>
+                <div class="flex-col gap-sm">
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Log one decision
+                    made today</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Update execution
+                    score</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Clear email
+                    inbox</label>
+                  <label
+                    style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:.88rem;color:var(--text-secondary)"><input
+                      type="checkbox" style="width:16px;height:16px;accent-color:var(--accent-blue)" /> Set tomorrow's
+                    #1 task</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quarterly View -->
+          <div class="tab-panel" data-tabgroup="cal" data-tab="cal-quarterly">
+            <div class="card mb-lg">
+              <h5 class="mb-md">Quarterly Goal System</h5>
+              <div id="qgoals-cal-list">
+                <p class="text-muted" style="font-size:.85rem">Goals are managed from the Dashboard → Quarterly Goals
+                  section.</p>
+              </div>
+            </div>
+            <div class="card">
+              <h5 class="mb-md">Weekly Review Template</h5>
+              <div class="flex-col gap-md">
+                <div class="form-group"><label class="form-label">What went well?</label><textarea class="form-control"
+                    placeholder="Key wins this week..." rows="2"></textarea></div>
+                <div class="form-group"><label class="form-label">What didn't work?</label><textarea
+                    class="form-control" placeholder="Blockers, mistakes..." rows="2"></textarea></div>
+                <div class="form-group"><label class="form-label">Key learning</label><textarea class="form-control"
+                    placeholder="Insight or lesson learned..." rows="2"></textarea></div>
+                <div class="form-group"><label class="form-label">Next week's #1 priority</label><input
+                    class="form-control" placeholder="Strategic objective" /></div>
+              </div>
+              <button class="btn btn-primary mt-lg">Save Weekly Review</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── DECISIONS ──────────────────────────────────────── -->
+      <div class="page" id="page-decisions">
+        <div class="page-content">
+          <div class="page-header">
+            <div class="section-label">Strategic Thinking</div>
+            <h2>Decision Journal</h2>
+          </div>
+
+          <div class="tabs mb-lg" style="max-width:400px">
+            <button class="tab-btn active" data-tabgroup="decisions" data-tabid="new">New Decision</button>
+            <button class="tab-btn" data-tabgroup="decisions" data-tabid="log">Decision Log</button>
+          </div>
+
+          <div class="tab-panel active" data-tabgroup="decisions" data-tab="decisions-new">
+            <div class="card" style="max-width:800px">
+              <h5 class="mb-lg">Log a Decision</h5>
+              <div class="grid-2 gap-md">
+                <div class="form-group"><label class="form-label">Decision Title</label><input class="form-control"
+                    id="dec-title" placeholder="e.g. Hire our first VP of Sales" /></div>
+                <div class="form-group"><label class="form-label">Reversibility</label><select class="form-control"
+                    id="dec-reversibility">
+                    <option>Reversible</option>
+                    <option>Irreversible</option>
+                    <option>Partially Reversible</option>
+                  </select></div>
+              </div>
+              <div class="form-group mt-md"><label class="form-label">Context</label><textarea class="form-control"
+                  id="dec-context" placeholder="What situation led to this decision?"></textarea></div>
+              <div class="form-group mt-md"><label class="form-label">Options Considered</label><textarea
+                  class="form-control" id="dec-options" placeholder="List the alternatives evaluated..."></textarea>
+              </div>
+              <div class="form-group mt-md"><label class="form-label">Key Assumptions</label><textarea
+                  class="form-control" id="dec-assumptions" placeholder="What assumptions are you making?"></textarea>
+              </div>
+              <div class="grid-2 gap-md mt-md">
+                <div class="form-group"><label class="form-label">Confidence Level (%)</label><input
+                    class="form-control" type="number" id="dec-confidence" min="0" max="100" value="70" /></div>
+                <div class="form-group"><label class="form-label">Review Date</label><input class="form-control"
+                    type="date" id="dec-review" /></div>
+              </div>
+              <div class="form-group mt-md"><label class="form-label">Expected Outcome</label><textarea
+                  class="form-control" id="dec-outcome" placeholder="What do you expect to happen?"></textarea></div>
+              <button class="btn btn-primary mt-lg" onclick="submitDecision()">Log Decision</button>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tabgroup="decisions" data-tab="decisions-log">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Decision</th>
+                    <th>Confidence</th>
+                    <th>Reversibility</th>
+                    <th>Expected Outcome</th>
+                    <th>Review Date</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="decision-list"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── FINANCE ────────────────────────────────────────── -->
+      <div class="page" id="page-finance">
+        <div class="page-content">
+          <div class="page-header flex justify-between items-center">
+            <div>
+              <div class="section-label">Capital Intelligence</div>
+              <h2>Finance Control Center</h2>
+            </div>
+            <button class="btn btn-secondary" onclick="toggle('fin-editor')">Edit Metrics</button>
+          </div>
+
+          <!-- Edit panel -->
+          <div id="fin-editor" style="display:none" class="card mb-lg">
+            <h5 class="mb-md">Update Financials</h5>
+            <div class="grid-4 gap-md">
+              <div class="form-group"><label class="form-label">MRR ($)</label><input class="form-control" type="number"
+                  id="fin-input-mrr" placeholder="42000" /></div>
+              <div class="form-group"><label class="form-label">ARR ($)</label><input class="form-control" type="number"
+                  id="fin-input-arr" placeholder="504000" /></div>
+              <div class="form-group"><label class="form-label">Burn Rate ($)</label><input class="form-control"
+                  type="number" id="fin-input-burn" placeholder="18000" /></div>
+              <div class="form-group"><label class="form-label">Runway (mo)</label><input class="form-control"
+                  type="number" id="fin-input-runway" placeholder="14" /></div>
+              <div class="form-group"><label class="form-label">CAC ($)</label><input class="form-control" type="number"
+                  id="fin-input-cac" placeholder="320" /></div>
+              <div class="form-group"><label class="form-label">LTV ($)</label><input class="form-control" type="number"
+                  id="fin-input-ltv" placeholder="3200" /></div>
+              <div class="form-group"><label class="form-label">Churn (%)</label><input class="form-control"
+                  type="number" id="fin-input-churn" placeholder="2.4" /></div>
+              <div class="form-group"><label class="form-label">Gross Margin (%)</label><input class="form-control"
+                  type="number" id="fin-input-margin" placeholder="71" /></div>
+              <div class="form-group"><label class="form-label">Growth Rate (%)</label><input class="form-control"
+                  type="number" id="fin-input-growth" placeholder="18" /></div>
+            </div>
+            <button class="btn btn-primary mt-md" onclick="saveFinancials()">Update Dashboard</button>
+          </div>
+
+          <!-- KPI grid -->
+          <div class="grid-4 mb-lg">
+            <div class="stat-card">
+              <div class="stat-label">MRR</div>
+              <div class="stat-value text-accent" id="fin-mrr">$42,000</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">ARR</div>
+              <div class="stat-value" id="fin-arr">$504,000</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Burn Rate / mo</div>
+              <div class="stat-value text-red" id="fin-burn">$18,000</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Runway</div>
+              <div class="stat-value" id="fin-runway">14 mo</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">CAC</div>
+              <div class="stat-value" id="fin-cac">$320</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">LTV</div>
+              <div class="stat-value text-green" id="fin-ltv">$3,200</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">LTV:CAC</div>
+              <div class="stat-value text-green" id="fin-ltvca">10x</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Churn Rate</div>
+              <div class="stat-value" id="fin-churn">2.4%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Gross Margin</div>
+              <div class="stat-value text-green" id="fin-margin">71%</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">MoM Growth</div>
+              <div class="stat-value text-accent" id="fin-growth">+18%</div>
+            </div>
+          </div>
+
+          <div class="grid-2 gap-lg mb-lg">
+            <div class="card">
+              <h5 class="mb-md">MRR Trend (7mo)</h5>
+              <div id="mrr-chart" class="chart-container"></div>
+            </div>
+            <div class="card">
+              <h5 class="mb-md">Monthly Burn</h5>
+              <div id="burn-chart" class="chart-container"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h5 class="mb-md">⚠ Financial Red Flag Alerts</h5>
+            <div id="fin-flags" class="flex-col gap-sm"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── LEARNING ────────────────────────────────────────── -->
+      <div class="page" id="page-learning">
+        <div class="page-content">
+          <div class="page-header">
+            <div class="section-label">Knowledge Architecture</div>
+            <h2>Learning System</h2>
+          </div>
+
+          <div class="tabs mb-lg" style="max-width:560px">
+            <button class="tab-btn active" data-tabgroup="learn" data-tabid="tracker">Tracker</button>
+            <button class="tab-btn" data-tabgroup="learn" data-tabid="sprint">Deep Sprint</button>
+            <button class="tab-btn" data-tabgroup="learn" data-tabid="audit">Monthly Audit</button>
+          </div>
+
+          <div class="tab-panel active" data-tabgroup="learn" data-tab="learn-tracker">
+            <div class="card mb-lg">
+              <h5 class="mb-md">Add Learning Item</h5>
+              <div class="grid-3 gap-md">
+                <div class="form-group"><label class="form-label">Title</label><input class="form-control"
+                    id="learn-title" placeholder="Book / podcast / course title" /></div>
+                <div class="form-group"><label class="form-label">Type</label><select class="form-control"
+                    id="learn-type">
+                    <option>Book</option>
+                    <option>Podcast</option>
+                    <option>Case Study</option>
+                    <option>Course</option>
+                    <option>Article</option>
+                  </select></div>
+                <div class="form-group"><label class="form-label">Progress (%)</label><input class="form-control"
+                    type="number" id="learn-progress" min="0" max="100" value="0" /></div>
+              </div>
+              <button class="btn btn-primary btn-sm mt-md" onclick="submitLearning()">Add Item</button>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Progress</th>
+                    <th>%</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="learning-list"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tabgroup="learn" data-tab="learn-sprint">
+            <div class="card">
+              <h5 class="mb-md">Deep Learning Sprint Planner</h5>
+              <div class="grid-2 gap-md">
+                <div class="form-group"><label class="form-label">Sprint Topic</label><input class="form-control"
+                    placeholder="e.g. Financial modeling mastery" /></div>
+                <div class="form-group"><label class="form-label">Duration</label><select class="form-control">
+                    <option>1 week</option>
+                    <option>2 weeks</option>
+                    <option>30 days</option>
+                  </select></div>
+                <div class="form-group"><label class="form-label">Daily Time Block</label><input class="form-control"
+                    placeholder="e.g. 7–8 AM daily" /></div>
+                <div class="form-group"><label class="form-label">Success Metric</label><input class="form-control"
+                    placeholder="How you'll know you've mastered it" /></div>
+              </div>
+              <div class="form-group mt-md"><label class="form-label">Resources</label><textarea class="form-control"
+                  placeholder="List books, courses, mentors..."></textarea></div>
+              <button class="btn btn-primary mt-md">Start Sprint</button>
+            </div>
+          </div>
+
+          <div class="tab-panel" data-tabgroup="learn" data-tab="learn-audit">
+            <div class="card">
+              <h5 class="mb-md">Monthly Learning Audit</h5>
+              <div class="flex-col gap-md">
+                <div class="form-group"><label class="form-label">Books Completed</label><input class="form-control"
+                    type="number" min="0" value="0" /></div>
+                <div class="form-group"><label class="form-label">Key Insight</label><textarea class="form-control"
+                    placeholder="Most important thing learned this month..."></textarea></div>
+                <div class="form-group"><label class="form-label">Skill Applied to Business</label><textarea
+                    class="form-control" placeholder="How did learning translate to execution?"></textarea></div>
+                <div class="form-group"><label class="form-label">Next Month Focus Area</label><input
+                    class="form-control" placeholder="e.g. Capital allocation frameworks" /></div>
+              </div>
+              <button class="btn btn-primary mt-md">Save Audit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── ADVICE FILTER ───────────────────────────────────── -->
+      <div class="page" id="page-advice">
+        <div class="page-content">
+          <div class="page-header">
+            <div class="section-label">Signal vs Noise</div>
+            <h2>Advice Filter System</h2>
+            <p>Evaluate any advice through a structured multi-lens framework before acting on it.</p>
+          </div>
+
+          <div class="grid-2 gap-lg">
+            <div class="card">
+              <h5 class="mb-md">Advice Input</h5>
+              <div class="flex-col gap-md">
+                <div class="form-group"><label class="form-label">Source / Who gave this advice?</label><input
+                    class="form-control" id="adv-source" placeholder="e.g. Investor, mentor, Twitter thread" /></div>
+                <div class="form-group"><label class="form-label">The Advice</label><textarea class="form-control"
+                    id="adv-text" placeholder="Paste or describe the advice..."></textarea></div>
+                <div class="form-group"><label class="form-label">Your Context</label><textarea class="form-control"
+                    id="adv-context" placeholder="Your current stage, business model, situation..."></textarea></div>
+              </div>
+              <button class="btn btn-primary mt-md" onclick="evaluateAdvice()">Run Evaluation →</button>
+            </div>
+
+            <div>
+              <div class="card mb-lg" id="adv-result" style="display:none">
+                <h5 class="mb-md">Evaluation Result</h5>
+                <div class="flex justify-between items-center mb-md">
+                  <span style="font-size:.9rem;color:var(--text-secondary)">Signal Quality Score</span>
+                  <span id="adv-score" style="font-size:1.8rem;font-weight:800">—</span>
+                </div>
+                <div id="adv-warnings"></div>
+              </div>
+
+              <div class="card">
+                <h5 class="mb-md">Evaluation Framework</h5>
+                <div class="flex-col gap-sm">
+                  <div class="alert alert-blue">
+                    <div><strong>Context Match</strong> — Is their situation similar to yours?</div>
+                  </div>
+                  <div class="alert alert-blue">
+                    <div><strong>Incentive Check</strong> — What do they gain if you follow this?</div>
+                  </div>
+                  <div class="alert alert-blue">
+                    <div><strong>Specificity Test</strong> — Is it specific to your problem or generic?</div>
+                  </div>
+                  <div class="alert alert-blue">
+                    <div><strong>Pattern vs Opinion</strong> — Is this evidence or just belief?</div>
+                  </div>
+                  <div class="alert alert-blue">
+                    <div><strong>Data Verification</strong> — Can you verify the underlying assumptions?</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── NETWORK ────────────────────────────────────────── -->
+      <div class="page" id="page-network">
+        <div class="page-content">
+          <div class="page-header">
+            <div class="section-label">Strategic Relationships</div>
+            <h2>Network &amp; Mentorship Tracker</h2>
+          </div>
+
+          <div class="card mb-lg">
+            <h5 class="mb-md">Add Contact</h5>
+            <div class="grid-4 gap-md">
+              <div class="form-group"><label class="form-label">Name</label><input class="form-control" id="con-name"
+                  placeholder="Full name" /></div>
+              <div class="form-group"><label class="form-label">Tier</label><select class="form-control" id="con-tier">
+                  <option>Tier 1</option>
+                  <option>Tier 2</option>
+                  <option>Tier 3</option>
+                </select></div>
+              <div class="form-group"><label class="form-label">Role / Company</label><input class="form-control"
+                  id="con-role" placeholder="e.g. Partner @ a16z" /></div>
+              <div class="form-group"><label class="form-label">Last Contact</label><input class="form-control"
+                  type="date" id="con-date" /></div>
+            </div>
+            <button class="btn btn-primary btn-sm mt-md" onclick="submitContact()">Add Contact</button>
+          </div>
+
+          <div class="table-wrap mb-lg">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Tier</th>
+                  <th>Role</th>
+                  <th>Last Contact</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="contact-list"></tbody>
+            </table>
+          </div>
+
+          <div class="grid-3 gap-lg">
+            <div class="card">
+              <h5 class="mb-md">Tier System</h5>
+              <div class="flex-col gap-sm">
+                <div class="flex gap-sm items-center"><span class="badge badge-blue">Tier 1</span><span
+                    style="font-size:.85rem;color:var(--text-secondary)">Active advisors, investors, board</span></div>
+                <div class="flex gap-sm items-center"><span class="badge badge-cyan">Tier 2</span><span
+                    style="font-size:.85rem;color:var(--text-secondary)">Peer founders, domain experts</span></div>
+                <div class="flex gap-sm items-center"><span class="badge badge-purple">Tier 3</span><span
+                    style="font-size:.85rem;color:var(--text-secondary)">Aspirational — not yet activated</span></div>
+              </div>
+            </div>
+            <div class="card">
+              <h5 class="mb-md">Monthly Outreach</h5>
+              <div class="form-group"><label class="form-label">Target contacts / month</label><input
+                  class="form-control" type="number" value="5" min="1" /></div>
+              <div class="form-group mt-sm"><label class="form-label">Outreach goal this month</label><textarea
+                  class="form-control" placeholder="e.g. Reconnect with 3 Tier 1 advisors" rows="2"></textarea></div>
+            </div>
+            <div class="card">
+              <h5 class="mb-md">Advisor Equity Tracker</h5>
+              <div class="form-group"><label class="form-label">Advisor Name</label><input class="form-control"
+                  placeholder="Name" /></div>
+              <div class="form-group mt-sm"><label class="form-label">Equity %</label><input class="form-control"
+                  type="number" placeholder="0.25" step="0.01" /></div>
+              <div class="form-group mt-sm"><label class="form-label">Vesting (months)</label><input
+                  class="form-control" type="number" value="24" /></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── LEARNING LIBRARY ───────────────────────────────── -->
+      <div class="page" id="page-library">
+        <div class="page-content">
+          <div class="page-header">
+            <div class="section-label">Curated CEO Curriculum</div>
+            <h2>Learning Library</h2>
+            <p>Deep-dive curricula for every domain of CEO mastery. Frameworks, books, mental models, and exercises —
+              curated for execution-focused founders.</p>
+          </div>
+
+          <!-- Stats bar -->
+          <div class="grid-4 mb-lg">
+            <div class="stat-card">
+              <div class="stat-label">Total Modules</div>
+              <div class="stat-value text-accent">13</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Frameworks</div>
+              <div class="stat-value">45+</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Curated Books</div>
+              <div class="stat-value text-green">65+</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Exercises</div>
+              <div class="stat-value text-accent">52+</div>
+            </div>
+          </div>
+
+          <!-- Filter bar -->
+          <div class="flex gap-sm mb-lg" style="flex-wrap:wrap;align-items:center">
+            <span style="font-size:.8rem;color:var(--text-muted);font-weight:600;margin-right:4px">FILTER:</span>
+            <button class="lib-filter-btn btn btn-sm btn-secondary active" data-filter="all"
+              onclick="filterLibrary('all')">All Modules</button>
+            <button class="lib-filter-btn btn btn-sm btn-secondary" data-filter="domains"
+              onclick="filterLibrary('domains')">9 Domains</button>
+            <button class="lib-filter-btn btn btn-sm btn-secondary" data-filter="bonus"
+              onclick="filterLibrary('bonus')">Bonus Topics</button>
+            <span style="margin-left:auto;font-size:.78rem;color:var(--text-muted)" id="lib-count">13 modules</span>
+          </div>
+
+          <!-- Module grid -->
+          <div class="flex-col gap-md" id="library-grid"></div>
+
+          <!-- Bottom note -->
+          <div class="card mt-xl"
+            style="text-align:center;padding:var(--sp-xl);border-color:rgba(139,92,246,0.2);background:rgba(139,92,246,0.04)">
+            <p style="color:var(--text-secondary);font-size:.9rem;max-width:520px;margin:0 auto">
+              Each module is a perpetual resource. Return weekly, apply one exercise, and track progress in your
+              Learning System.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /main-area -->
+  </div><!-- /app-shell -->
+
+  <script src="js/app.js"></script>
+  <script src="js/domains.js"></script>
+  <script src="js/library.js"></script>
+</body>
+
+</html>
