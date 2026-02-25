@@ -7,6 +7,6 @@
     "start": "serve -p ${PORT:-3000} -s ."
   },
   "dependencies": {
-    "serve": "^14.4.1"
+    "serve": "latest"
   }
 }
