@@ -1,0 +1,12 @@
+{
+  "name": "founder-os",
+  "version": "1.0.0",
+  "description": "Founder OS – Strategic CEO Development System",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -p ${PORT:-3000} -s ."
+  },
+  "dependencies": {
+    "serve": "^14.4.1"
+  }
+}
