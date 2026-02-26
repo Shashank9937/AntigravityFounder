@@ -234,6 +234,15 @@
     box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
 }
 
+[data-theme="light"] .topbar {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme="light"] .topbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+}
+
 .topbar-left {
     display: flex;
     align-items: center;
